@@ -42,6 +42,7 @@
   system.defaults.NSGlobalDomain."com.apple.springing.delay" = 0.0;
   system.defaults.NSGlobalDomain."com.apple.swipescrolldirection" = true;
   system.defaults.".GlobalPreferences"."com.apple.sound.beep.sound" = "/System/Library/Sounds/Funk.aiff";
+  system.defaults.controlcenter.BatteryShowPercentage = false;
   system.defaults.menuExtraClock.Show24Hour = false;
   system.defaults.menuExtraClock.ShowDayOfWeek = true;
   system.defaults.menuExtraClock.ShowDate = 2;
@@ -61,6 +62,9 @@
   system.defaults.finder._FXShowPosixPathInTitle = true;
   system.defaults.finder._FXSortFoldersFirst = true;
   system.defaults.finder.FXEnableExtensionChangeWarning = false;
+  system.defaults.safari.SearchProviderShortName = "Google";
+  system.defaults.safari.PrivateSearchEngineUsesNormalSearchEngineToggle = true;
+  system.defaults.safari.ShowStandaloneTabBar = true;
   system.defaults.screencapture.location = "/tmp";
   system.defaults.screensaver.askForPassword = true;
   system.defaults.screensaver.askForPasswordDelay = 5;

@@ -21,10 +21,12 @@ let
   LaunchServices = defaultsToList "com.apple.LaunchServices" cfg.LaunchServices;
   NSGlobalDomain = defaultsToList "-g" cfg.NSGlobalDomain;
   menuExtraClock = defaultsToList "com.apple.menuextra.clock" cfg.menuExtraClock;
+  controlcenter = defaultsToList "com.apple.controlcenter" cfg.controlcenter;
   dock = defaultsToList "com.apple.dock" cfg.dock;
   finder = defaultsToList "com.apple.finder" cfg.finder;
   magicmouse = defaultsToList "com.apple.AppleMultitouchMouse" cfg.magicmouse;
   magicmouseBluetooth = defaultsToList "com.apple.driver.AppleMultitouchMouse.mouse" cfg.magicmouse;
+  safari = defaultsToList "com.apple.Safari" cfg.safari;
   screencapture = defaultsToList "com.apple.screencapture" cfg.screencapture;
   screensaver = defaultsToList "com.apple.screensaver" cfg.screensaver;
   spaces = defaultsToList "com.apple.spaces" cfg.spaces;
@@ -74,10 +76,12 @@ in
         LaunchServices
         NSGlobalDomain
         menuExtraClock
+        controlcenter
         dock
         finder
         magicmouse
         magicmouseBluetooth
+        safari
         screencapture
         screensaver
         spaces
@@ -97,10 +101,18 @@ in
         ${concatStringsSep "\n" GlobalPreferences}
         ${concatStringsSep "\n" LaunchServices}
         ${concatStringsSep "\n" menuExtraClock}
+        ${concatStringsSep "\n" controlcenter}
         ${concatStringsSep "\n" dock}
         ${concatStringsSep "\n" finder}
         ${concatStringsSep "\n" magicmouse}
         ${concatStringsSep "\n" magicmouseBluetooth}
+
+        if ls "$HOME/Library/Mail" >/dev/null 2>&1; then
+        ${concatStringsSep "\n" safari}
+        else
+        echo -e "\e[35;1mwarning:\e[0m Setting Safari defaults requires Full Disk Access"
+        fi
+
         ${concatStringsSep "\n" screencapture}
         ${concatStringsSep "\n" screensaver}
         ${concatStringsSep "\n" spaces}

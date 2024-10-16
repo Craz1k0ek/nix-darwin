@@ -48,6 +48,14 @@ with lib;
       '';
     };
 
+    system.defaults.finder.FXRemoveOldTrashItems = mkOption {
+      type = types.nullOr types.bool;
+      default = null;
+      description = ''
+        Whether to remove items in the bin afer 30 days. The default is false.
+      '';
+    };
+
     system.defaults.finder.AppleShowAllExtensions = mkOption {
       type = types.nullOr types.bool;
       default = null;

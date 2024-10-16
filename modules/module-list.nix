@@ -19,8 +19,10 @@
   ./system/defaults/GlobalPreferences.nix
   ./system/defaults/CustomPreferences.nix
   ./system/defaults/clock.nix
+  ./system/defaults/controlcenter.nix
   ./system/defaults/dock.nix
   ./system/defaults/finder.nix
+  ./system/defaults/safari.nix
   ./system/defaults/screencapture.nix
   ./system/defaults/screensaver.nix
   ./system/defaults/alf.nix
